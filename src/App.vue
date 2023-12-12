@@ -1,10 +1,13 @@
 <script setup>
 import Header from "./components/Header.vue";
+import TodoInput from "./components/TodoInput.vue";
 </script>
 
 <template>
-  <Header />
-  <main></main>
+  <main class="container">
+    <Header />
+    <TodoInput />
+  </main>
 </template>
 
 <style scoped></style>
