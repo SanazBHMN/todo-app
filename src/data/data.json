@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "text": "Jog around the park 3x",
+        "isActive": true
+    },
+    {
+        "id": 2,
+        "text": "10 minutes meditation",
+        "isActive": true
+    },
+    {
+        "id": 3,
+        "text": "Read for 1 hour",
+        "isActive": true
+    },
+    {
+        "id": 4,
+        "text": "Pick up groceries",
+        "isActive": true
+    },
+    {
+        "id": 5,
+        "text": "Complete Todo App on Frontend Mentor",
+        "isActive": true
+    }
+]
