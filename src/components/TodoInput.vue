@@ -13,7 +13,6 @@ const addTodo = () => {
 </script>
 
 <template>
-  {{ newTodo }}
   <input
     v-model.trim="newTodo"
     @keyup.enter="addTodo"

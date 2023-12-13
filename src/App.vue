@@ -16,14 +16,17 @@ const handleAddTodo = (newTodoText) => {
   };
   todos.value.push(newTodo);
 };
+
+const handleRemoveTodo = (todoId) => {
+  todos.value = todos.value.filter((todo) => todo.id !== todoId);
+};
 </script>
 
 <template>
   <main class="container">
-    {{ todos }}
     <Header />
     <TodoInput @add-todo="handleAddTodo" />
-    <TodoList :todos="todos" />
+    <TodoList :todos="todos" @remove-todo="handleRemoveTodo" />
   </main>
 </template>
 

@@ -1,8 +1,9 @@
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, defineEmits } from "vue";
 import Todo from "../components/Todo.vue";
 
 const { todos } = defineProps(["todos"]);
+const emit = defineEmits(["remove-todo"]);
 </script>
 
 <template>
@@ -12,5 +13,6 @@ const { todos } = defineProps(["todos"]);
     :id="todo.id"
     :text="todo.text"
     :isActive="todo.isActive"
+    @remove-todo="$emit('remove-todo', $event)"
   />
 </template>
