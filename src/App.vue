@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import Header from "./components/Header.vue";
 import TodoInput from "./components/TodoInput.vue";
 import TodoList from "./components/TodoList.vue";
@@ -20,6 +20,8 @@ const handleAddTodo = (newTodoText) => {
 const handleRemoveTodo = (todoId) => {
   todos.value = todos.value.filter((todo) => todo.id !== todoId);
 };
+
+const activeTodos = computed(() => todos.value.filter((todo) => todo.isActive));
 </script>
 
 <template>
@@ -27,6 +29,9 @@ const handleRemoveTodo = (todoId) => {
     <Header />
     <TodoInput @add-todo="handleAddTodo" />
     <TodoList :todos="todos" @remove-todo="handleRemoveTodo" />
+    <div>
+      <small>{{ activeTodos.length }} items left</small>
+    </div>
   </main>
 </template>
 
